@@ -18,8 +18,7 @@ export class SearchComponent implements OnInit {
   search(): void {
     const text = this.searchWordInput.nativeElement.value
     if(text.trim() !== ''){
-      console.log(text);
-      this.gifsService.searchGifs(text);
+      this.gifsService.evaluateWord(text);
       
       this.searchWordInput.nativeElement.value = ''
     }
